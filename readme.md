@@ -1,8 +1,8 @@
 # Car Crash & Object Detection using YOLOv8
 
-## 설명
+## 소개
 
- Car Crash & Object Detection은 YOLOv8 모델을 세밀하게 조정하여 블랙박스 카메라의 시점에서 사고를 감지하는 강력한 감지 시스템을 만드는 것을 목표로 합니다. 또한, 모델은 사고 현장에서 사람, 차량 및 이륜차와 같은 다양한 객체를 인식할 수 있도록 훈련되었습니다.
+Car Crash & Object Detection은 블랙박스 카메라의 시점에서 사고를 탐지하는 강력한 감지 시스템을 만드는 것을 목표로 합니다. YOLOv8 모델을 세밀하게 조정하여 사람, 차량 및 이륜차와 같은 다양한 객체를 인식할 수 있도록 훈련되었습니다.
 
 ## YOLOv8
 
@@ -34,7 +34,28 @@ YOLOv8 저장소는 [여기](https://github.com/ultralytics/ultralytics)에서 �
     ```bash
     pip install ultralytics
     ```
-    
+
+### Docker
+1. **Docker Build**
+    ```bash
+    docker build -t tarm:latest .  
+    ```
+2. **Docker run** 
+    - 예측
+        ```bash
+        docker run -it --name tarm --gpus all <docker_image> bash
+        ```
+    - 학습
+        ```bash
+        docker run -it --name tarm --gpus all -v 'local_datasets:/Car-Crash-Object-Detection-using-YOLOv8/datasets' <docker_image> bash
+        ```
+3. **추가 설정**
+    - libglib2.0-dev 설치
+        ```bash
+        apt-get update
+        apt-get install libglib2.0-dev
+        ```
+
 ## 예측
 ```bash
 python main.py
@@ -150,7 +171,7 @@ python main.py
 | 버전 | 설명 | 날짜 |
 | ---- | --- | --- |
 | 0.5 | label 변환 기능 및 학습 모델 | 24.04.11|
-| 0.6 | mp4로 저장 | 24.04.11|
+| 0.6 | 예측 시, mp4로 저장 | 24.04.11|
 
 ## 참고 자료
 
