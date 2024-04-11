@@ -51,7 +51,6 @@ while(cap.isOpened()):
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 1)
                 cvzone.putTextRect(frame, f'{c}', (x1, y1), 1, 1)
 
-    cv2.imshow('frame',frame)
     out.write(frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
