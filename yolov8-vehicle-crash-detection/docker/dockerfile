@@ -19,5 +19,6 @@ RUN pip3 install ultralytics
 # Car-Crash-Object-Detection-using-YOLOv8 레포지토리 클론
 RUN git clone https://github.com/grayson1999/Car-Crash-Object-Detection-using-YOLOv8.git
 
+
 # 환경 변수 설정
 ENV LD_LIBRARY_PATH /usr/local/cuda/lib64:$LD_LIBRARY_PATH
