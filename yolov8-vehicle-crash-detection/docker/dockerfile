@@ -1,0 +1,20 @@
+# 베이스 이미지 설정
+FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+COPY ../* .
+
+
+# 필요한 패키지 설치
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3.8 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install ultralytics 
+
+# 환경 변수 설정
+ENV LD_LIBRARY_PATH /usr/local/cuda/lib64:$LD_LIBRARY_PATH

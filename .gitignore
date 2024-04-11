@@ -1,0 +1,12 @@
+## datasets
+datasets/download_data/1_set_download/*
+datasets/origin_data/1_data/img_set/*
+datasets/origin_data/1_data/labelling_set/*
+datasets/yolo_label/images/*
+datasets/yolo_label/labels/*
+datasets/yolo_label/train/*
+datasets/yolo_label/valid/*
+
+##etc
+datasets/windows_v1.8.1.zip
+

@@ -1,0 +1,8 @@
+names:
+  0: "accident"
+  1: "vehicle"
+  2: "pedestrian"
+  3: "two-wheeled-vehicle"
+nc: 4
+train: C:/Capstone/Traffic_Accident_Responsibility_Model/objectNcrash_detection/datasets/yolo_label/train/images/
+val: C:/Capstone/Traffic_Accident_Responsibility_Model/objectNcrash_detection/datasets/yolo_label/valid/images/
