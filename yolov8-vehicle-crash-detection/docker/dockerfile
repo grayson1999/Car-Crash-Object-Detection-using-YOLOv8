@@ -2,7 +2,7 @@
 FROM nvidia/cuda:11.4.3-cudnn8-devel-ubuntu20.04
 
 # 작업 디렉토리 설정
-WORKDIR /
+WORKDIR /app
 
 # 필요한 패키지 설치
 RUN apt-get update && \
@@ -10,15 +10,10 @@ RUN apt-get update && \
     python3.8 \
     python3-pip \
     git \
-    libgl1-mesa-glx && \
-    rm -rf /var/lib/apt/lists/*
+    libgl1-mesa-glx
 
 # ultralytics 패키지 설치
 RUN pip3 install ultralytics 
-
-# Car-Crash-Object-Detection-using-YOLOv8 레포지토리 클론
-RUN git clone https://github.com/grayson1999/Car-Crash-Object-Detection-using-YOLOv8.git
-
 
 # 환경 변수 설정
 ENV LD_LIBRARY_PATH /usr/local/cuda/lib64:$LD_LIBRARY_PATH

@@ -1,0 +1,10 @@
+names:
+  0: "accident"
+  1: "vehicle"
+  2: "pedestrian"
+  3: "two-wheeled-vehicle"
+  4: "bike"
+
+nc: 5
+train: /app/datasets/yolo_label/train/images/
+val: /app/datasets/yolo_label/valid/images/

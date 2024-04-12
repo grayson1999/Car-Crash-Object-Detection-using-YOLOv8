@@ -41,14 +41,10 @@ YOLOv8 저장소는 [여기](https://github.com/ultralytics/ultralytics)에서 �
     docker build -t tarm:latest .  
     ```
 2. **Docker run** 
-    - 예측
-        ```bash
-        docker run -it --name tarm --gpus all <docker_image> bash
-        ```
-    - 학습
-        ```bash
-        docker run -it --name tarm --gpus all -v 'local_datasets:/Car-Crash-Object-Detection-using-YOLOv8/datasets' <docker_image> bash
-        ```
+
+    ```bash
+    docker run -it --name tarm --gpus all -v 'local_path/Car-Crash-Object-Detection-using-YOLOv8:/app' <docker image> bash
+    ```
 3. **추가 설정**
     - libglib2.0-dev 설치
         ```bash
@@ -172,6 +168,7 @@ python main.py
 | ---- | --- | --- |
 | 0.5 | label 변환 기능 및 학습 모델 | 24.04.11|
 | 0.6 | 예측 시, mp4로 저장 | 24.04.11|
+| 0.7 | 리눅스 환경에서 작동이 잘 되도록 수정, sample data 학습 | 24.04.12|
 
 ## 참고 자료
 

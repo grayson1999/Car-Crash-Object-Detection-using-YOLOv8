@@ -6,6 +6,7 @@ datasets/yolo_label/images/*
 datasets/yolo_label/labels/*
 datasets/yolo_label/train/*
 datasets/yolo_label/valid/*
+datasets/yolo_label/*.zip
 
 ##etc
 datasets/windows_v1.8.1.zip
